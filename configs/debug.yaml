@@ -1,0 +1,13 @@
+# CTAF Debug Config — fast sanity check
+
+run:
+  data_root: /data1/test/LAES_2025/data/dcase
+  machines: [gearbox, slider, toycar]
+  experiments: [logmel_only, full_5view]
+  output_dir: results/debug
+  seed: 13711
+  device: cuda:0
+
+training:
+  epochs: 3
+  batch_size: 16
