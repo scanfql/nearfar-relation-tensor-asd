@@ -1,24 +1,19 @@
-.DS_Store
-
-# Python cache / env
 __pycache__/
 *.py[cod]
+.DS_Store
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
-.venv/
-venv/
-env/
 
-# Local experiment artifacts
-results/
-checkpoints/
+data/
+outputs/
 artifacts/
-tmp/
+tensor_cache/
+*.npz
+*.npy
+*.wav
+*.flac
 
-# Local model files
-*.pt
-*.pth
-*.ckpt
-*.safetensors
+paper_workspace/
+stage*/
+baseline_reproduction/

@@ -1,0 +1,5 @@
+basename,near_path,far_path,machine_type,domain,split,label
+section_00_source_train_normal_0000.wav,/path/to/near.wav,/path/to/far.wav,fan,source,source_fit,normal
+section_00_target_train_normal_0000.wav,/path/to/near.wav,/path/to/far.wav,fan,target,target_anchor,normal
+section_00_source_test_normal_0000.wav,/path/to/near.wav,/path/to/far.wav,fan,source,eval,normal
+section_00_source_test_anomaly_0000.wav,/path/to/near.wav,/path/to/far.wav,fan,source,eval,anomaly

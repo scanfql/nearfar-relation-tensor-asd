@@ -1,33 +1,15 @@
-# CTAF: Clean Tensor Acoustic Frontend — Default Config
-# Label-free protocol: no anomaly labels used in training/scoring/model selection.
-
-run:
-  data_root: /data1/test/LAES_2025/data/dcase
-  machines: [bearing, fan, gearbox, slider, toycar, toytrain, valve]
-  experiments: [logmel_only, dynamic_3view, edge_3view, full_5view]
-  output_dir: results/full
-  seed: 13711
-  device: cuda:0
-
 audio:
   sample_rate: 16000
   n_fft: 1024
-  hop_length: 512
+  hop_length: 160
   n_mels: 128
-  eps: 1.0e-6
-
-features:
-  norm: train_std           # "train_std" or "per_file_robust"
-  use_target_train: false   # only source normal for training
-
-model:
-  latent_channels: 64
-  kernel_size: 3
-  norm: batch               # "batch" or "none"
-
-training:
-  epochs: 50
-  batch_size: 32
-  learning_rate: 1.0e-3
-  weight_decay: 1.0e-5
-  optimizer: Adam
+tensor:
+  frames: 96
+  bins: 64
+  channels: 12
+mpca:
+  ranks: [32, 32, 8]
+patchmax:
+  patch: [8, 8]
+routing:
+  restricted_alpha_grid: [0.0, 0.075, 0.15, 0.225]
