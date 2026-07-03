@@ -97,13 +97,3 @@ Those large or licensed artifacts are intentionally not bundled here. This
 package provides the method code and reproducibility interface needed to rebuild
 the tensor branch when those inputs are available locally.
 
-## Repository Hygiene
-
-Do not commit:
-
-- `data/`
-- `outputs/`
-- `tensor_cache/`
-- `.npz`, `.npy`, `.wav`, or `.flac` files
-- internal `stage*` exploration directories
-
